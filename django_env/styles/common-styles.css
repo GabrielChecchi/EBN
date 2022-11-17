@@ -1,0 +1,21 @@
+.fondo_naranja_oscuro{
+  background-color: #F3B072;
+}
+
+
+@media screen and (max-width: 600px) {
+  .columna.derecha, .columna.medio {
+    width: 100%;
+  }
+}
+
+
+footer {
+  padding: 10px;
+  text-align: center;
+  position: static;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  color: white;
+}
