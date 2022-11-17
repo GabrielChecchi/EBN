@@ -1,7 +1,11 @@
 .fondo_naranja_oscuro{
-  background-color: #F3B072;
+  background-color: #F3B072
 }
 
+*{
+
+  font-style: "Poppins", sans-serif;
+}
 
 @media screen and (max-width: 600px) {
   .columna.derecha, .columna.medio {
@@ -9,11 +13,15 @@
   }
 }
 
+.hover a:hover {
+  text-decoration: underline;
+  font-size: 105%;
+}
 
-footer {
+footer{
   padding: 10px;
   text-align: center;
-  position: static;
+  position: absolute;
   bottom: 0;
   width: 100%;
   height: 40px;

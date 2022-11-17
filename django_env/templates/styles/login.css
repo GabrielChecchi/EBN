@@ -15,6 +15,7 @@
 body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
+  background-color: #f1c398;
 }
 
 .signin-ventana{
@@ -23,13 +24,9 @@ body {
   align-items: center;
   flex-direction: column; 
   justify-content: center;
-  width: 80%;
+  width: 100%;
   min-height: 100%;
-  padding: 20px;
-  margin: auto;
-  position: absolute;
-  margin-left: 10%;
-  margin-right: 10%;
+  padding: 10px;
 }
 
 .signin-signup-content{
