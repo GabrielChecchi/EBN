@@ -6,7 +6,7 @@
   <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="shortcut icon" href="img/logo.png">
     <title>Esoterico - Bohemio y Natural</title>
 
@@ -27,7 +27,8 @@
     <!-- <link rel="stylesheet" href="styles/estilos.css">-->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> 
-    <script src="scripts/scripts.js"></script>
+
+    <script src="scripts/login.js"></script>
 
   </head>
 
@@ -61,27 +62,35 @@
 
         <div class="signin-signup-content">
 
-          <h2 class="active-tab title-signin-signup">Iniciar Sesi&oacute;n</h2>
-          <h2 class="inactive-tab underline-hover title-signin-signup">Registrarse</h2>
+          <button class="invisible-button" onclick="login()"><h2 id="sign-title" class="active-tab title-signin-signup">Iniciar Sesi&oacute;n</h2></button>
+          <button class="invisible-button" onclick="register()"><h2 id="signup-title" class="inactive-tab underline-hover title-signin-signup">Registrarse</h2></button>
 
           <form id="form-signin"> <!-- accept = "<lugar donde se envia la informacion>"-->
 
-            <input id="signin-name" class="txt-signin-signup" type="text" placeholder="Nombre de Usuario">
-            <input id="signin-password" class="txt-signin-signup" type="text" placeholder="Contrase&ntilde;a">
-            <p><input id="signin-button" class="button-signin-signup" type="submit" value="Ingresar"> 
+            <input id="input-mail" class="txt-signin-signup" type="text" placeholder="Correo Electr&oacute;nico" hidden="true">
+            <input id="input-username" class="txt-signin-signup" type="text" placeholder="Nombre de Usuario" hidden="true">
+
+            <input id="input-name" class="txt-signin-signup" type="text" placeholder="Nombre de Usuario ó Correo Electr&oacute;nico">
+            <input id="input-password" class="txt-signin-signup" type="text" placeholder="Contrase&ntilde;a">
+            <input id="input-button-sigin" class="button-signin-signup" type="submit" value="Ingresar"> 
+            
+            <input id="input-signup-password" class="txt-signin-signup" type="text" placeholder="Contase&ntilde;a" hidden="true">
+            <input id="input-repeat-password" class="txt-signin-signup" type="text" placeholder="Repita su Contase&ntilde;a" hidden="true">
+           
+            <input id="input-button-signup" class="button-signin-signup" type="submit" value="Registrarse" hidden="true">  
 
           </form>
 
           <div class="form-footer">
-
-            <a class="underline-hover link-forgot" href="#">&#191;Olvidaste tu contrase&ntilde;a?</a>
+            
+            <a id="form-footer-a" class="underline-hover link-forgot" href="#">&#191;Olvidaste tu contrase&ntilde;a?</a>
           </div>
         </div>
       </div>
     </main>
 
     <footer class="fondo_naranja_oscuro">
-
+      
       <p>&copy; Esoterico - Bohemio y Natural</p>
     </footer>
   </body>
