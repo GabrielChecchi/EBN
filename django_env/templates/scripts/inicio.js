@@ -8,3 +8,9 @@ function cambiarMegusta() {
       elem.setAttribute("src", "img/megusta_activado.png")
   }
 }
+
+function colocarNav(){
+  $("#nav-placeholder").load("navbar.html");
+}
+
+
