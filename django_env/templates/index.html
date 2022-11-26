@@ -15,14 +15,19 @@
 
     <link rel="stylesheet" href="styles/estilos.css">
     <link rel="stylesheet" href="styles/common-styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="scripts/inicio.js"></script>
   </head>
 
   <body style="background-color: #FAE7D6;">
-    <!-- Here is our main header that is used across all the pages of our website -->
 
+    <!-- Header -->
     <header>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-      <script src="scripts/inicio.js"></script>
+      <!-- nav -->
+      
+    <div id="nav-placeholder" class="fondo_naranja_oscuro"></div>
+    <script>colocarNav();</script><!-- ESTA MAL, FALTA CORREGIR. IGUAL NO TE CORRESPONDE MIRAR CHUSMA -->
     </header>
 
     <nav class="fondo_naranja_oscuro hover">
@@ -50,7 +55,6 @@
     <!-- Here is our page's main content -->
     <main>
       <!-- It contains an article -->
-
       <div class="inicio">
         <img src="img/imagen_ejemplo.png" alt="Imagen" class="img_inicio">
         <h1>Esoterico-Bohemio y Natural</h1>
@@ -90,9 +94,7 @@
     </div>
     </main>
 
-    <!-- And here is our main footer that is used across all the pages of our website -->
-    <footer class="fondo_naranja_oscuro" >
-      <iframe src="footer.html" frameborder="0"></iframe>
-    </footer>
+    <!-- Footer -->
+    <iframe src="footer.html" width=100% height=50px frameborder="0"></iframe>
   </body>
 </html>

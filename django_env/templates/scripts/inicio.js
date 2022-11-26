@@ -1,4 +1,4 @@
-var usuario_iniciado = 'false';   // si el usuario inicio sesion
+//var usuario_iniciado = 'false';   // si el usuario inicio sesion
 
 
 function cambiarMegusta() {
@@ -11,7 +11,7 @@ function cambiarMegusta() {
       elem.setAttribute("src", "img/megusta_activado.png")
   }
 }
-
+/*
 function cambiarNombreUsuario(usuario, img_path){
 
   //console.log('Holi');
@@ -45,3 +45,4 @@ function cambiarNombreUsuario(usuario, img_path){
     //nav_div_derecho.appendChild(parrafo_info_usuario);
   }
 }
+*/
