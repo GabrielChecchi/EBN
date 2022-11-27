@@ -1,10 +1,10 @@
 .img_inicio {
-    float: left;
-    clear: both;
-    width: 100%;
-    max-width: 200px;
-    height: auto;  
-    padding-right: 10px;
+  float: left;
+  clear: both;
+  width: 100%;
+  max-width: 200px;
+  height: auto;  
+  padding-right: 15px;
 }
 
 .inicio{
@@ -70,6 +70,19 @@
   content: "";
   display: table;
   clear: both;
+}
+
+.sobre_mi {
+  margin: 8%; 
+}
+
+.img_sobre_mi {
+  float: left;
+  clear: both;
+  width: 100%;
+  max-width: 300px;
+  height: auto;  
+  padding-right: 15px;
 }
 
 @media screen and (max-width: 600px) {

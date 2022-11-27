@@ -18,11 +18,14 @@
   font-size:larger;
 }
 
+iframe {
+  align-self: flex-end;
+  margin-top: calc(13%);
+}
 
 footer{
   padding-top: 10px;
   text-align: center;
-  align-self: flex-end;
   width: 100%;
   height: 40px;
   color: white;
