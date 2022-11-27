@@ -23,14 +23,66 @@
   padding: 50px;
 }
 
+.new-post{ /*apartado donde el admin puede crear posts*/
+
+  width: 100%;
+  background-color: white;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.user-profile{ /*la parte donde va el nombre del usuario*/
+
+  display: flex;
+  align-items: center;
+}
+
+.user-profile p {
+
+ /* margin-bottom: -5px;*/
+  font-weight: 500;
+  color: #626262;
+}
+
+.input-new-post textarea{
+
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+}
+
+.add-post-links{
+
+  display: flex;
+  margin-top: 0px;
+}
+
+.add-post-links a {
+
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #626262;
+  font-size: 13px;
+}
+
+.add-post-links img{
+
+  width: 20px;
+  margin-right: 5px;
+}
+
 .publicacion{
   text-align: center;
   background-color: white;
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
-  padding: 10px;
-  margin: 10px;
+  border-radius: 6px;
+  width: 100%;
+  padding: 20px;
+  color: #626262;
+  margin: 20px 0 ;
 }
 
 .publicacion h1{

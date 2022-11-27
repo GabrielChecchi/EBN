@@ -1,6 +1,3 @@
-//var usuario_iniciado = 'false';   // si el usuario inicio sesion
-
-
 function cambiarMegusta() {
   let elem = document.getElementById('imagen');
   var atrib = elem.getAttribute("src");
@@ -11,6 +8,11 @@ function cambiarMegusta() {
       elem.setAttribute("src", "img/megusta_activado.png")
   }
 }
+
+function addPost(){
+  
+}
+
 /*
 function cambiarNombreUsuario(usuario, img_path){
 
