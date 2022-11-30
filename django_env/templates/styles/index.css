@@ -33,8 +33,8 @@
 
 .user-profile{ /*la parte donde va el nombre del usuario*/
 
-  display: flex;
-  align-items: center;
+  display: block;
+  text-align: justify;
 }
 
 .user-profile p {
@@ -69,16 +69,30 @@
 .add-post-links a {
 
   text-decoration: none;
-  display: flex;
-  align-items: center;
   color: #626262;
   font-size: 13px;
+  float: left;
 }
 
 .add-post-links img{
 
   width: 20px;
   margin-right: 5px;
+}
+
+.btn-postear{
+
+  margin-left:8px;
+  background-color: #F3B072;
+  border: 1px solid #F3B072;
+  color: #fff;
+  text-decoration: none;
+  line-height: 22px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+  float: right;
 }
 
 .publicacion{
@@ -145,6 +159,11 @@
   background-repeat: no-repeat;
 }
 
+.new-comment{
+
+  margin-bottom: 25px; 
+}
+
 .box_comment{
 	display: block;
   position: relative;
@@ -178,21 +197,6 @@
   margin-top: 8px;
 }
 
-.box_comment button{
-
-  margin-left:8px;
-  background-color: #F3B072;
-  border: 1px solid #F3B072;
-  color: #fff;
-  text-decoration: none;
-  line-height: 22px;
-  border-radius: 2px;
-  font-size: 14px;
-  font-weight: bold;
-  position: relative;
-  float: right;
-}
-
 .box_comment h4{
   font-weight: 600;
   white-space: nowrap;
@@ -210,7 +214,7 @@
 
 .container-list-comments{
 
-  margin-top: 25px;
+  margin-top: 65px;
 }
 
 .comment{
@@ -245,8 +249,20 @@
 	border-left: 1px dotted #d3d6db;
 	margin-top: 12px;
 	list-style: none;
-	padding:0 0 0 8px
+	padding:0 0 0 18px;
+  margin: 15px;
 }
+
+.reply-comment{
+
+  margin: 12px 0 ;
+}
+
+#list-comments .comment{
+
+  margin-top: 10px;
+}
+
 .columna.derecha{
  width: 10%;
 }
