@@ -145,34 +145,25 @@
   background-repeat: no-repeat;
 }
 
-.body-comments{
-
-  display: block;
+.box_comment{
+	display: block;
   position: relative;
+  line-height: 1.358;
   word-break: break-word;
   border: 1px solid #d3d6db;
+  word-wrap: break-word;
   background: transparent;
   box-sizing: border-box;
   cursor: text;
   font-size: 12px;
-	padding: 0;
   border: none;
   margin-top: 30px;
-}
-
-.body-comments p{
-
-  font-weight: 600;
-  white-space: nowrap;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 14px;
-  line-height: 1.358;
-  margin:0;
+	padding: 0 8px;
+  overflow: hidden;
   text-align: justify;
 }
 
-.body-comments textarea{
+.box_comment textarea{
 
   outline: none;
   resize: none;
@@ -187,7 +178,7 @@
   margin-top: 8px;
 }
 
-.body-comments button{
+.box_comment button{
 
   margin-left:8px;
   background-color: #F3B072;
@@ -202,13 +193,60 @@
   float: right;
 }
 
-.new-comment{
-  
-  padding: 0 8px;
-  font-size: 12px;
-  display: block; /*uno debajo del otro*/
+.box_comment h4{
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.358;
+  margin:0;
 }
 
+.box_comment p {
+  margin: 4px 0;
+  text-align:justify;
+}
+
+.container-list-comments{
+
+  margin-top: 25px;
+}
+
+.comment{
+  margin-top: 24px;
+  list-style-type: none;
+}
+
+.comment .comment-content{
+  display:block;
+  overflow:hidden;
+  padding: 0;
+}
+
+.comment .comment-content .comment-interactions{
+  font-size: 12px;
+  line-height: 1.358;
+}
+.comment .comment-content .comment-interactions a{
+  cursor: pointer;
+  text-decoration: none;
+}
+.comment .comment-content .comment-interactions span{
+  color: #90949c;
+}
+
+.comment .comment-interactions img{
+  height: 48px;
+  width: 48px;
+}
+
+.child_replay{
+	border-left: 1px dotted #d3d6db;
+	margin-top: 12px;
+	list-style: none;
+	padding:0 0 0 8px
+}
 .columna.derecha{
  width: 10%;
 }
