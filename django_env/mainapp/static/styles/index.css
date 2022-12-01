@@ -1,0 +1,293 @@
+.img_inicio {
+  float: left;
+  clear: both;
+  width: 100%;
+  max-width: 200px;
+  height: auto;  
+  padding-right: 15px;
+}
+
+.inicio{
+  background-color: #474343;
+  color: white;
+  padding: 15px;
+  overflow: hidden;
+}
+
+.columna{
+  float: left;
+}
+
+.columna.medio{
+  width: 80%;
+  padding: 50px;
+}
+
+.new-post{ /*apartado donde el admin puede crear posts*/
+
+  width: 100%;
+  background-color: white;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.user-profile{ /*la parte donde va el nombre del usuario*/
+
+  display: block;
+  text-align: justify;
+}
+
+.user-profile p {
+
+ /* margin-bottom: -5px;*/
+  font-weight: 500;
+  color: #626262;
+}
+
+.user-profile span{
+
+  font-size: 13px;
+  color: #9a9a9a;
+}
+
+.input-new-post textarea{
+
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+}
+
+.add-post-links{
+
+  display: flex;
+  margin-top: 0px;
+}
+
+.add-post-links a {
+
+  text-decoration: none;
+  color: #626262;
+  font-size: 13px;
+  float: left;
+}
+
+.add-post-links img{
+
+  width: 20px;
+  margin-right: 5px;
+}
+
+.btn-postear{
+
+  margin-left:8px;
+  background-color: #F3B072;
+  border: 1px solid #F3B072;
+  color: #fff;
+  text-decoration: none;
+  line-height: 22px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+  float: right;
+}
+
+.publicacion{
+  text-align: center;
+  background-color: white;
+  border-radius: 6px;
+  width: 100%;
+  padding: 20px;
+  color: #626262;
+  margin: 20px 0 ;
+  overflow: hidden;
+}
+
+.publicacion h1{
+  margin-top: 10px;
+  text-align: left;
+  font-weight: 450;
+  font-size: 25px;
+}
+
+.texto{
+  margin: 15px 0;
+  text-align: left;
+  font-weight: 400;
+  font-size: 15px;
+  color: #9a9a9a;
+}
+
+.img_interacciones{
+  clear: both;
+  width: 100%;
+  max-width: 20px;
+  height: auto;
+}
+
+.post-img {
+  clear: both;
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  /*max-height: 400px;*/
+  height: auto;
+}
+
+.post-interactions{
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-icons img {
+
+  margin-right: 5px;
+}
+
+.post-icons button{
+
+  display: inline-flex;
+  margin-right: 30px;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+}
+
+.new-comment{
+
+  margin-bottom: 25px; 
+}
+
+.box_comment{
+	display: block;
+  position: relative;
+  line-height: 1.358;
+  word-break: break-word;
+  border: 1px solid #d3d6db;
+  word-wrap: break-word;
+  background: transparent;
+  box-sizing: border-box;
+  cursor: text;
+  font-size: 12px;
+  border: none;
+  margin-top: 30px;
+	padding: 0 8px;
+  overflow: hidden;
+  text-align: justify;
+}
+
+.box_comment textarea{
+
+  outline: none;
+  resize: none;
+  background-color: transparent;
+  border: solid;
+  border-color: #626262;
+  border-width: 1px;
+  border-radius: 4px;
+  width: 100%;
+  min-height: 40px;
+	padding: 12px 8px;
+  margin-top: 8px;
+}
+
+.box_comment h4{
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.358;
+  margin:0;
+}
+
+.box_comment p {
+  margin: 4px 0;
+  text-align:justify;
+}
+
+.container-list-comments{
+
+  margin-top: 65px;
+}
+
+.comment{
+  margin-top: 24px;
+  list-style-type: none;
+}
+
+.comment .comment-content{
+  display:block;
+  overflow:hidden;
+  padding: 0;
+}
+
+.comment .comment-content .comment-interactions{
+  font-size: 12px;
+  line-height: 1.358;
+}
+.comment .comment-content .comment-interactions a{
+  cursor: pointer;
+  text-decoration: none;
+}
+.comment .comment-content .comment-interactions span{
+  color: #90949c;
+}
+
+.comment .comment-interactions img{
+  height: 48px;
+  width: 48px;
+}
+
+.child_replay{
+	border-left: 1px dotted #d3d6db;
+	margin-top: 12px;
+	list-style: none;
+	padding:0 0 0 18px;
+  margin: 15px;
+}
+
+.reply-comment{
+
+  margin: 12px 0 ;
+}
+
+#list-comments .comment{
+
+  margin-top: 10px;
+}
+
+.columna.derecha{
+ width: 10%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.sobre_mi {
+  margin: 8%; 
+}
+
+.img_sobre_mi {
+  float: left;
+  clear: both;
+  width: 100%;
+  max-width: 300px;
+  height: auto;  
+  padding-right: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .columna.derecha, .columna.medio {
+    width: 100%;
+  }
+}

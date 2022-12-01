@@ -1,0 +1,9 @@
+.container-list-products{
+
+    display: flex;
+}
+
+.products{
+
+    display: block;
+}

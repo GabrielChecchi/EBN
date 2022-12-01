@@ -1,0 +1,70 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="{% static 'img/logo.png' %}">
+    <title>Esoterico - Bohemio y Natural</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/" >
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'styles\index.css' %}">
+    <link rel="stylesheet" href="{% static 'styles\common-styles.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    
+    <script src="{% static 'scripts\inicio.js' %}"></script>
+    <script src="{% static 'scripts\general.js' %}"></script>
+  </head>
+
+  <body style="background-color: #FAE7D6;">
+
+    <!-- Header -->
+    <header>
+      <!-- nav -->
+      
+    <div id="nav-placeholder" class="fondo_naranja_oscuro"></div>
+      {% include "navbar.html" %}
+    </header>
+    
+    <!-- Main -->
+    <main>
+
+        <div>
+          <h4>Todos los Productos</h4>
+        </div>
+
+        <div id="products-list" class="container-list-products">
+
+          <div class="product">
+                
+            <img src="{% static 'img\imagen_ejemplo.png' %}">
+            <hr>
+            <h6>NombreProducto</h6>
+            <button>Comprar Ahora</button>
+            <button>Hacer Pregunta</button>
+          </div>
+            
+          <div class="product">
+            <img src="{% static 'img\imagen_ejemplo.png' %}" alt="" class="produto__img">
+            <div class="productDescription">
+              <h3 class="produto__title">Novidade 1</h3>
+              <spam class="produto__price">$90.00</spam>
+            </div>
+            <a href="#">Holaquetal</a>
+          </div>
+        </div>  
+    </main>
+
+    <!-- Footer -->
+    <iframe src="{% url 'footer' %}" width=100% height=50px frameborder="0"></iframe>
+  </body>
+</html>
