@@ -63,7 +63,12 @@
 .add-post-links{
 
   display: flex;
+  justify-content: center;
   margin-top: 0px;
+}
+
+.postEspacio{
+  width: 80%;
 }
 
 .add-post-links a {
