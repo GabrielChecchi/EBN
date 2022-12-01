@@ -1,9 +1,25 @@
 .container-list-products{
 
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 
-.products{
+@media only screen and (max-width: 600px) {
+    .mainItems {
+      grid-template-columns: auto;
+    }
+  }
+
+.product{
 
     display: block;
+    text-align: center;
+    background-color: white;
+    border-radius: 6px;
+    padding: 20px;
+    color: #626262;
+    margin: 20px 0 ;
+    overflow: hidden;
+    width: 50%;
+    height: 100px;
 }
