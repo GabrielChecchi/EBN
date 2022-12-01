@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="styles\index.css">
     <link rel="stylesheet" href="styles\common-styles.css">
+    <link rel="stylesheet" href="styles\products.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -36,30 +37,62 @@
     <!-- Main -->
     <main>
 
+      <div class="row">
         <div>
           <h4>Todos los Productos</h4>
         </div>
 
-        <div id="products-list" class="container-list-products">
+        <div class="columna derecha">
 
-          <div class="product">
-                
-            <img src="django_env\templates\img\imagen_ejemplo.png">
-            <hr>
-            <h6>NombreProducto</h6>
-            <button>Comprar Ahora</button>
-            <button>Hacer Pregunta</button>
-          </div>
-            
-          <div class="product">
-            <img src="images/Novidades/Novidade1.jpg" alt="" class="produto__img">
-            <div class="productDescription">
-              <h3 class="produto__title">Novidade 1</h3>
-              <spam class="produto__price">$90.00</spam>
+        </div>
+
+        <div class="columna medio">
+
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card h-100">
+                <img src="django_env\templates\img\camera.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
             </div>
-            <a href="#">Holaquetal</a>
-          </div>
-        </div>  
+            <div class="col">
+              <div class="card h-100">
+                <img src="django_env\templates\img\camera.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a short card.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="img\camera.png" class="card-img-top" alt="...">
+                <hr>
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="django_env\templates\img\camera.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>       
+        </div>
+        
+        <div class="columna derecha">
+
+        </div>
+
+      </div>
     </main>
 
     <!-- Footer -->
