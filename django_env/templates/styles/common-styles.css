@@ -47,3 +47,8 @@ footer{
   height: 40px;
   color: white;
 }
+
+.posicionMensaje {
+  margin-top: 20%;
+  position:fixed;
+}
