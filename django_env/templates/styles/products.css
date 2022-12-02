@@ -1,25 +1,62 @@
-.container-list-products{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
-    display: grid;
-    grid-template-columns: auto auto auto;
+.title-products h4{
+
+  margin-top: 3%;
+  margin-left: 4%;
 }
-
-@media only screen and (max-width: 600px) {
-    .mainItems {
-      grid-template-columns: auto;
-    }
-  }
 
 .product{
 
-    display: block;
-    text-align: center;
-    background-color: white;
-    border-radius: 6px;
-    padding: 20px;
-    color: #626262;
-    margin: 20px 0 ;
-    overflow: hidden;
-    width: 50%;
-    height: 100px;
+  transition: box-shadow 0.1;
+}
+
+.product:hover{
+
+  -webkit-box-shadow: 0 30px 20px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 20px 20px 0 rgba(0,0,0,0.2);
+}
+
+.col img{
+
+  height: 50%;
+  width: 100%;
+
+  margin-bottom: 0px;
+}
+
+hr.new5 {
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+}
+
+.col p{
+
+  font-size: 15px;
+}
+
+.btn-product{
+
+  width: 100%;
+  height: 15%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border: solid black;
+  border-width: 1px;
+  border-radius: 2px;
+}
+
+.buy-now{
+
+  background-color: black;
+  color: white;
+}
+
+.make-question{
+
+  background-color: #F3B072;
+  color: black;
+  margin-bottom: 5%;
 }

@@ -1,10 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
 .fondo_naranja_oscuro{
   background-color: #F3B072
 }
 
 *{
 
-  font-style: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.title{
+
+  margin-left: 1%;
+  font-size: 20px;
+}
+
+.img-title{
+  margin-right: 10px;
+}
+
+.buttons-title{
+
+  margin-right: 1%;
 }
 
 @media screen and (max-width: 600px) {
