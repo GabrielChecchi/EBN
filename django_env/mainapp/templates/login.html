@@ -1,82 +1,54 @@
+{% extends "base.html" %}
+
 {% load static %}
 
-<!DOCTYPE html>
-<html>
+{% block imports %}
 
-  <head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="shortcut icon" href="{% static 'img/logo.png' %}">
-    <title>Esoterico - Bohemio y Natural</title>
+<link rel="stylesheet" href="{% static 'styles/login.css' %}">
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
-    rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="{% static 'scripts/login.js' %}"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com/" >
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
+{% endblock %}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="{% static 'styles\login.css' %}">
-    <link rel="stylesheet" href="{% static 'styles\common-styles.css' %}">
-    <!-- <link rel="stylesheet" href="styles/estilos.css">-->
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> 
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="{% static 'scripts/login.js' %}"></script>
-    <script src="{% static 'scripts/general.js' %}"></script>
-
-  </head>
-
-  <body>
-
-     <!-- Header -->
-     <header>
-      <!-- nav -->
-      
-    <div id="nav-placeholder" class="fondo_naranja_oscuro"></div>
-      {% include "navbar.html" %}
-    </header>
+{% block content %}
     
-    <main>
+<main>
+  <div class="signin-ventana">
+    <div class="signin-signup-content">
 
-      <div class="signin-ventana">
+      <button class="invisible-button" onclick="login()"><h2 id="sign-title" class="active-tab title-signin-signup">Iniciar Sesi&oacute;n</h2></button>
+      <button class="invisible-button" onclick="register()"><h2 id="signup-title" class="inactive-tab underline-hover title-signin-signup">Registrarse</h2></button>
 
-        <div class="signin-signup-content">
+      <form id="form-signin" action = "autenticar_usuario/" method = "POST"> <!-- accept = "<lugar donde se envia la informacion>"-->
 
-          <button class="invisible-button" onclick="login()"><h2 id="sign-title" class="active-tab title-signin-signup">Iniciar Sesi&oacute;n</h2></button>
-          <button class="invisible-button" onclick="register()"><h2 id="signup-title" class="inactive-tab underline-hover title-signin-signup">Registrarse</h2></button>
+        <label for="" id="avisoError" hidden="true" class="aviso">Error en el ingreso de datos</label>
 
-          <form id="form-signin"> <!-- accept = "<lugar donde se envia la informacion>"-->
+        <input id="input-mail" class="txt-signin-signup" type="text" placeholder="Correo Electr&oacute;nico" hidden="true">
+        <input id="input-username" class="txt-signin-signup" type="text" placeholder="Nombre de Usuario" hidden="true">
 
-            <input id="input-mail" class="txt-signin-signup" type="text" placeholder="Correo Electr&oacute;nico" hidden="true">
-            <input id="input-username" class="txt-signin-signup" type="text" placeholder="Nombre de Usuario" hidden="true">
+        <input id="input-name" class="txt-signin-signup" type="text" placeholder="Nombre de Usuario ó Correo Electr&oacute;nico">
+        <input id="input-password" class="txt-signin-signup" type="text" placeholder="Contrase&ntilde;a">
 
-            <input id="input-name" class="txt-signin-signup" type="text" placeholder="Nombre de Usuario ó Correo Electr&oacute;nico">
-            <input id="input-password" class="txt-signin-signup" type="text" placeholder="Contrase&ntilde;a">
-            <input id="input-button-sigin" class="button-signin-signup" type="submit" value="Ingresar"> 
-            
-            <input id="input-signup-password" class="txt-signin-signup" type="text" placeholder="Contase&ntilde;a" hidden="true">
-            <input id="input-repeat-password" class="txt-signin-signup" type="text" placeholder="Repita su Contase&ntilde;a" hidden="true">
-           
-            <input id="input-button-signup" class="button-signin-signup" type="submit" value="Registrarse" hidden="true">  
+        <input id="input-button-sigin" class="button-signin-signup" type="reset" onclick="avisarError()" value="Ingresar">
 
-          </form>
+        <input id="input-signup-pais" class="txt-signin-signup" type="text" placeholder="País" hidden="true">
+        <input id="input-signup-localidad" class="txt-signin-signup" type="text" placeholder="Localidad" hidden="true">
 
-          <div class="form-footer">
-            
-            <a id="form-footer-a" class="underline-hover link-forgot" href="#">&#191;Olvidaste tu contrase&ntilde;a?</a>
-          </div>
-        </div>
+        <input id="input-signup-password" class="txt-signin-signup" type="text" placeholder="Contase&ntilde;a" hidden="true">
+        <input id="input-repeat-password" class="txt-signin-signup" type="text" placeholder="Repita su Contase&ntilde;a" hidden="true">
+
+        <input id="input-button-signup" class="button-signin-signup" type="reset" onclick="avisarError()" value="Registrarse" hidden="true">
+
+      </form>
+
+      <div class="form-footer">
+        <a id="form-footer-a" class="underline-hover link-forgot" href="#">&#191;Olvidaste tu contrase&ntilde;a?</a>
       </div>
-    </main>
+    </div>
+  </div>
+</main>
 
-    <!-- Footer -->
-    <iframe src="{% url 'footer' %}" width=100% height=50px frameborder="0"></iframe>
-
-</html>
+{% endblock %}

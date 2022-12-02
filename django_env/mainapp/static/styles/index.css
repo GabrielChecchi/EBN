@@ -63,7 +63,12 @@
 .add-post-links{
 
   display: flex;
+  justify-content: center;
   margin-top: 0px;
+}
+
+.postEspacio{
+  width: 80%;
 }
 
 .add-post-links a {
@@ -290,4 +295,14 @@
   .columna.derecha, .columna.medio {
     width: 100%;
   }
+}
+
+.fa {
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: #F3B072;
 }

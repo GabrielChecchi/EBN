@@ -12,4 +12,4 @@ def products_screen(request):
     return render(request, "products.html")
 
 def about_me_screen(request):
-    return render(request, "about_as.html")
+    return render(request, "about_us.html")

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block imports %}
+
+<link rel="stylesheet" href="{% static 'styles/index.css' %}">
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+{% endblock %}
+
+{% block content %}
+
+<main>
+    <div class="sobre_mi">
+        <h1>Sobre mi</h1>
+
+        <div style="margin-top: 20px;">
+            <p><img src="{% static 'img/imagen_ejemplo.png' %}" class="img_sobre_mi" alt="Imagen">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris.
+            </p>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

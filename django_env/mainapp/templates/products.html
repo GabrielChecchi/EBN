@@ -1,70 +1,99 @@
+{% extends "base.html" %}
+
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="shortcut icon" href="{% static 'img/logo.png' %}">
-    <title>Esoterico - Bohemio y Natural</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"rel="stylesheet" />
+{% block imports %}
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'styles/index.css' %}">
+<link rel="stylesheet" href="{% static 'styles/products.css' %}">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com/" >
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
-    <link rel="stylesheet" href="{% static 'styles\index.css' %}">
-    <link rel="stylesheet" href="{% static 'styles\common-styles.css' %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    
-    <script src="{% static 'scripts\inicio.js' %}"></script>
-    <script src="{% static 'scripts\general.js' %}"></script>
-  </head>
+{% endblock %}
 
-  <body style="background-color: #FAE7D6;">
+{% block content %}
 
-    <!-- Header -->
-    <header>
-      <!-- nav -->
-      
-    <div id="nav-placeholder" class="fondo_naranja_oscuro"></div>
-      {% include "navbar.html" %}
-    </header>
-    
-    <!-- Main -->
-    <main>
+<main>
+  <div class="row">
+    <div class="title-products">
+      <h4>Todos los Productos</h4>
+    </div>
 
-        <div>
-          <h4>Todos los Productos</h4>
+    <div class="columna derecha"></div>
+
+    <div class="columna medio">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <div class="col">
+          <div class="card h-100 product">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.2c86bqEebs-HT9AAlpzamgHaGe&pid=Api&P=0" class="card-img-top" alt="nombre-producto">
+            <hr class="new5">
+            <div class="card-body">
+              <h5 class="card-title">NombreProducto</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <button class="btn-product buy-now">Comprar Ahora</button>
+              <button class="btn-product make-question">Hacer Pregunta</button>
+            </div>
+          </div>
         </div>
 
-        <div id="products-list" class="container-list-products">
-
-          <div class="product">
-                
-            <img src="{% static 'img\imagen_ejemplo.png' %}">
-            <hr>
-            <h6>NombreProducto</h6>
-            <button>Comprar Ahora</button>
-            <button>Hacer Pregunta</button>
-          </div>
-            
-          <div class="product">
-            <img src="{% static 'img\imagen_ejemplo.png' %}" alt="" class="produto__img">
-            <div class="productDescription">
-              <h3 class="produto__title">Novidade 1</h3>
-              <spam class="produto__price">$90.00</spam>
+        <div class="col">
+          <div class="card h-100 product">
+            <img src="https://animalesqueridos.com/wp-content/uploads/2020/06/Gatito-rescatado.jpg" class="card-img-top" alt="nombre-producto">
+            <hr class="new5">
+            <div class="card-body">
+              <h5 class="card-title">NombreProducto</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <button class="btn-product buy-now">Comprar Ahora</button>
+              <button class="btn-product make-question">Hacer Pregunta</button>
             </div>
-            <a href="#">Holaquetal</a>
           </div>
-        </div>  
-    </main>
+        </div>
 
-    <!-- Footer -->
-    <iframe src="{% url 'footer' %}" width=100% height=50px frameborder="0"></iframe>
-  </body>
-</html>
+        <div class="col">
+          <div class="card h-100 product">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.ZSH0dHw58vKihAGZvtpw9gHaEo&pid=Api&P=0" class="card-img-top" alt="nombre-producto">
+            <hr class="new5">
+            <div class="card-body">
+              <h5 class="card-title">NombreProducto</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <button class="btn-product buy-now">Comprar Ahora</button>
+              <button class="btn-product make-question">Hacer Pregunta</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 product">
+            <img src="https://http2.mlstatic.com/hermoso-gatito-persa-D_NQ_NP_711611-MLM25784241820_072017-F.jpg" class="card-img-top" alt="nombre-producto">
+            <hr class="new5">
+            <div class="card-body">
+              <h5 class="card-title">NombreProducto</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <button class="btn-product buy-now">Comprar Ahora</button>
+              <button class="btn-product make-question">Hacer Pregunta</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 product">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.ZSH0dHw58vKihAGZvtpw9gHaEo&pid=Api&P=0" class="card-img-top" alt="nombre-producto">
+            <hr class="new5">
+            <div class="card-body">
+              <h5 class="card-title">NombreProducto</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <button class="btn-product buy-now">Comprar Ahora</button>
+              <button class="btn-product make-question">Hacer Pregunta</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="columna derecha"></div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

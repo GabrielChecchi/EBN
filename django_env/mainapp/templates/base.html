@@ -1,9 +1,10 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
     <link rel="shortcut icon" href="{% static 'img/logo.png' %}">
     <title>Esoterico - Bohemio y Natural</title>
@@ -14,27 +15,44 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="styles/estilos.css"> -->
     <link rel="stylesheet" href="{% static 'styles/common-styles.css' %}">
-  </head>
 
-<body>
-        <header class="fondo_naranja_oscuro hover d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-0 border-bottom">
-          <a href="{% url '' %}" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-            <img src="{% static 'img/logo.png' %}" alt="Logo" width="40" height="45" class="d-inline-block">
+    {% block imports %} {% endblock %}
+
+</head>
+
+<body style="background-color: #FAE7D6;">
+
+    <!-- navbar -->
+
+    <header class="fondo_naranja_oscuro hover d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-0 border-bottom">
+        <a href="{% url '' %}" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none title">
+            <img src="{% static 'img/logo.png' %}" alt="Logo" width="40" height="45" class="d-inline-block img-title">
             Esoterico-Bohemio y Natural
-          </a>
-    
-          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        </a>
+
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li><a href="{% url '' %}" class="nav-link px-2 link-dark">Inicio</a></li>
             <li><a href="{% url 'productos' %}" class="nav-link px-2 link-dark">Productos</a></li>
             <li><a href="{% url 'sobre-mi' %}" class="nav-link px-2 link-dark">Sobre mi</a></li>
-          </ul>
-    
-          <div class="col-md-3 text-end">
+        </ul>
+
+        <div class="col-md-3 text-end buttons-title">
             <button onclick="location.href = '{% url 'autenticacion' %}'" type="button" class="btn btn-light">Iniciar sesión</button>
             <button onclick="location.href = '{% url 'autenticacion' %}'" type="button" class="btn btn-light">Registrarse</button>
-          </div>
-        </header>
+        </div>
+    </header>
+
+    <!-- contenido -->
+
+    {% block content %} {% endblock %}
+
+    <!-- footer -->
+
+    <footer class="fondo_naranja_oscuro footer">
+        <p>&copy; Esoterico - Bohemio y Natural</p>
+    </footer>
+
 </body>
+
 </html>

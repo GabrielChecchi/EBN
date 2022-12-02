@@ -1,177 +1,146 @@
+{% extends "base.html "%}
+
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="shortcut icon" href="{% static 'img/logo.png' %}">
-    <title>Esoterico - Bohemio y Natural</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"rel="stylesheet" />
+{% block imports %}
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'styles/index.css' %}">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com/" >
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="{% static 'styles/index.css' %}">
-    <link rel="stylesheet" href="{% static 'styles/common-styles.css' %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    
-    <script src="{% static 'scripts\inicio.js' %}"></script>
-    <script src="{% static 'scripts\general.js' %}"></script>
-  </head>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
-  <body style="background-color: #FAE7D6;">
+<script src="{% static 'scripts\general.js' %}"></script>
+<script src="{% static 'scripts\inicio.js' %}"></script>
 
-    <!-- Header -->
-    <header>
-      <!-- nav -->
-      
-    <div id="nav-placeholder" class="fondo_naranja_oscuro"></div>
-      {% include "navbar.html" %}
-    </header>
-    
-    <!-- Main -->
-    <main>
-      <!-- It contains an article -->
-      <div class="inicio">
-        <img src="{% static 'img/inicial.jpg' %}" alt="Imagen" class="img_inicio">
-        <h1>Esoterico-Bohemio y Natural</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
-          lectus. Set sit amet ipsum mauris.</p>
+{% endblock %}
 
-      </div>
-    <div class="row">
-      
-      <div class="columna derecha">
+{% block content %}
 
-      </div>
-      
-      <div class="columna medio">
+<main>
+  <div class="inicio">
+    <img src="{% static 'img/inicial.jpg' %}" alt="Imagen" class="img_inicio">
+    <h1>Esoterico-Bohemio y Natural</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris.</p>
+  </div>
 
-        <div class="new-post">
-          
-          <div class="user-profile">
-            <p>NombreUsuarioPublica</p>
-          </div>
-
-          <div class="input-new-post">
-            <textarea rows="3" placeholder="Nueva Publicacion"></textarea>
-          </div>
-          <div class="add-post-links">
-
-            <a href="#"><img src="{% static 'img\camera.png' %}">Imagen</a>
-            <button id="btn-publicar" class="btn-postear" type="button" value="1">Publicar</button>
-          </div>
-
+  <div class="row">
+    <div class="columna derecha"></div>
+    <div id="columna-medio-inicio" class="columna medio">
+      <div class="new-post">
+        <div class="user-profile">
+          <p>NombreUsuarioPublica</p>
         </div>
 
-        <div class="publicacion">
+        <div class="input-new-post">
+          <textarea rows="3" placeholder="Nueva Publicacion"></textarea>
+        </div>
 
-          <div class="user-profile">
-            <p>NombreUsuarioPublica</p>
-            <span>Fecha Hora</span>
+        <div class="add-post-links">
+          <a href="#"><img src="{% static 'img\camera.png' %}">Imagen</a>
+          <button id="btn-publicar" class="btn-postear" type="button" value="1">Publicar</button>
+        </div>
+
+      </div>
+
+      <div class="publicacion">
+        <h1>Titulo</h1>
+
+        <div class="user-profile">
+          <span>Fecha Hora</span>
+        </div>
+
+        <p class="texto">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
+          lectus. Set sit amet ipsum mauris.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
+          lectus. Set sit amet ipsum mauris.
+        </p>
+
+        <img src="{% static 'img/imagen_ejemplo.png' %}" alt="Imagen" class="post-img">
+
+        <div class="post-interactions">
+          <div class="post-icons">
+            <ul  class="nav">
+              <li>
+                <i onclick="darLike(this)" class="fa fa-thumbs-up"><span class="post-interactions-text">Me gusta</span></i>
+              </li>
+
+              <li>
+                <button type="button" onclick="">
+                  <img src="{% static 'img/comentar.png' %}" alt="Imagen" class="img_interacciones">Comentar
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+
+        <div class="box_comment">
+          <div class="new-comment">
+            <div class="user-comment">
+              <h4 class="texto-body-comments">NombreUsuarioPublica</h4>
+            </div>
+
+            <div class="content-comment">
+              <textarea class="comment" placeholder="Escribe un Comentario"></textarea>
+            </div>
+
+            <div class="footer-comment">
+              <button class="btn-postear" type="button" value="1">Comentar</button>
+            </div>
           </div>
 
-          <h1>Titulo</h1>
-          
-          <p class="texto">
-            
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
-            lectus. Set sit amet ipsum mauris.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
-            lectus. Set sit amet ipsum mauris.
-          </p>
-            
-          <img src="{% static 'img/imagen_ejemplo.png' %}" alt="Imagen" class="post-img">
-          
-          <div class="post-interactions">
-            
-            <div class="post-icons">
-              <ul  class="nav">
-                <li>
-                  <button type="button" onclick="cambiarMegusta();">
-                    <img id="imagen" src="{% static 'img/megusta_desactivado.png' %}" alt="Imagen" class="img_interacciones">
-                  Me gusta</button>
-                </li>
-                <li>
-                  <button type="button" onclick="">
-                    <img src="{% static 'img/comentar.png' %}" alt="Imagen" class="img_interacciones">
-                  Comentar</button>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <hr>
-          <div class="box_comment">
-              
-            <div class="new-comment">
-
-              <div class="user-comment">
-                <h4 class="texto-body-comments">NombreUsuarioPublica</h4>
-              </div>
-              
-              <div class="content-comment">
-                <textarea class="comment" placeholder="Escribe un Comentario"></textarea>
-              </div>
-
-              <div class="footer-comment">
-                <button class="btn-postear" type="button" value="1">Comentar</button>
-              </div>
-            </div>
-
-            <div class="container-list-comments row">
-              <ul id="list-comments" class="col-md-12">
-      
-                <li class="comment row">
-                  <div class="comment-content col-md-11">
-                    <h4>Nath Ryuzaki<span aria-hidden="true"> · </span><span>26min</span></h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-                    <div class="comment-interactions">
-                      <a class="like" href="#">Me gusta</a>
-                      <a class="replay" href="#">Responder</a>
-                    </div>
+          <div class="container-list-comments row">
+            <ul id="list-comments" class="col-md-12">
+              <li class="comment row">
+                <div class="comment-content col-md-11">
+                  <h4>Nath Ryuzaki<span aria-hidden="true"> · </span><span>26min</span></h4>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+                  <div class="comment-interactions">
+                    <a class="like" href="#">Me gusta</a>
+                    <a class="replay" href="#">Responder</a>
                   </div>
-                </li>
-          
-                <li class="comment row">
-                  <div class="comment-content col-md-11">
-                    <h4>Nath Ryuzaki<span aria-hidden="true"> · </span><span>26min</span></h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-                    <div class="comment-interactions">
-                      <a class="like" href="#">Me gusta</a>
-                      <a class="replay" href="#">Responder</a>
-                    </div>
-                    <ul class="child_replay">
-                      <li class="reply-comment row">
-                         <div class="comment-content col-md-11 ">
-                            <h4>Nath Ryuzaki<span aria-hidden="true"> · </span><span>26min</span></h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-                            <div class="comment-interactions">
-                              <a class="like" href="#">Me gusta</a>
-                              <a class="replay" href="#">Responder</a>
-                            </div>
-                          </div>
-                        </li>
-                    </ul>
+                </div>
+              </li>
+
+              <li class="comment row">
+                <div class="comment-content col-md-11">
+                  <h4>Nath Ryuzaki<span aria-hidden="true"> · </span><span>26min</span></h4>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+
+                  <div class="comment-interactions">
+                    <a class="like" href="#">Me gusta</a>
+                    <a class="replay" href="#">Responder</a>
                   </div>
-                </li>
-              </ul>
-            </div>
+
+                  <ul class="child_replay">
+                    <li class="reply-comment row">
+                      <div class="comment-content col-md-11 ">
+                        <h4>Nath Ryuzaki<span aria-hidden="true"> · </span><span>26min</span></h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+                        <div class="comment-interactions">
+                          <a class="like" href="#">Me gusta</a>
+                          <a class="replay" href="#">Responder</a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-      
-      <div class="columna derecha">
+    </div>
+
+    <div class="columna derecha">
+      <div id="msg-placeholder" class="posicionMensaje">
+        {% include "mensajes.html" %}
       </div>
 
     </div>
-    </main>
 
-    <!-- Footer -->
-    <iframe src="{% url 'footer' %}" width=100% height=50px frameborder="0"></iframe>
-  </body>
-</html>
+  </div>
+</main>
+
+{% endblock %}

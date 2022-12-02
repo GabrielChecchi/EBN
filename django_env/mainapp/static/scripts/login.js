@@ -18,10 +18,14 @@ function register(){
 
     document.getElementById('input-repeat-password').hidden=false;
     document.getElementById('input-signup-password').hidden=false;
+
+    document.getElementById('input-signup-pais').hidden=false;
+    document.getElementById('input-signup-localidad').hidden=false;
     
     document.getElementById('input-button-signup').hidden=false;
     document.getElementById('input-button-sigin').hidden=true;
 
+    document.getElementById("avisoError").hidden = true;
     
     //form footer
   
@@ -29,7 +33,7 @@ function register(){
     form_footer.textContent = '¿Ya estás registrado? Inicia sesión';
   }
   
-  function login(){
+function login(){
   
     //form header
   
@@ -50,10 +54,19 @@ function register(){
     document.getElementById('input-repeat-password').hidden=true;
     document.getElementById('input-button-signup').hidden=true;
     document.getElementById('input-signup-password').hidden=true;
+    document.getElementById("avisoError").hidden = true;
     document.getElementById('input-button-sigin').hidden=false;  
+
+    document.getElementById('input-signup-pais').hidden=true;
+    document.getElementById('input-signup-localidad').hidden=true;
   
     //form footer
   
     var form_footer = document.getElementById('form-footer-a');
     form_footer.textContent = '¿Olvidaste tu contraseña?';
-  }
+}
+
+function avisarError(){
+  document.getElementById("avisoError").hidden = false;
+
+}

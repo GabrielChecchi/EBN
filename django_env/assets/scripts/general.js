@@ -1,6 +1,6 @@
-function colocarNav(){
-    $("#nav-placeholder").load("navbar.html");
-  }
+function colocarMsg(){
+$("#msg-placeholder").load("mensajes");
+}
 
 function seleccionar_nav(tipo){
     

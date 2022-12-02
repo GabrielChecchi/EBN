@@ -7,5 +7,6 @@ urlpatterns = [
     path('autenticacion/', views.login_screen, name = "autenticacion"),
     path('productos/', views.products_screen, name = "productos"),
     path('sobre-mi/', views.about_me_screen, name = "sobre-mi"),
-    path('footer/', TemplateView.as_view(template_name = "footer.html"), name = "footer")
+
+    #path('autenticar_usuario/', views.autenticar),
 ]
