@@ -53,18 +53,21 @@
           <button class="invisible-button" onclick="register()"><h2 id="signup-title" class="inactive-tab underline-hover title-signin-signup">Registrarse</h2></button>
 
           <form id="form-signin"> <!-- accept = "<lugar donde se envia la informacion>"-->
-
+            <label for="" id="avisoError" hidden="true" class="aviso">Error en el ingreso de datos</label>
             <input id="input-mail" class="txt-signin-signup" type="text" placeholder="Correo Electr&oacute;nico" hidden="true">
             <input id="input-username" class="txt-signin-signup" type="text" placeholder="Nombre de Usuario" hidden="true">
 
             <input id="input-name" class="txt-signin-signup" type="text" placeholder="Nombre de Usuario ó Correo Electr&oacute;nico">
             <input id="input-password" class="txt-signin-signup" type="text" placeholder="Contrase&ntilde;a">
-            <input id="input-button-sigin" class="button-signin-signup" type="submit" value="Ingresar"> 
-            
+            <input id="input-button-sigin" class="button-signin-signup" type="reset" onclick="avisarError()" value="Ingresar"> 
+          
+            <input id="input-signup-pais" class="txt-signin-signup" type="text" placeholder="País" hidden="true">
+            <input id="input-signup-localidad" class="txt-signin-signup" type="text" placeholder="Localidad" hidden="true">
+
             <input id="input-signup-password" class="txt-signin-signup" type="text" placeholder="Contase&ntilde;a" hidden="true">
             <input id="input-repeat-password" class="txt-signin-signup" type="text" placeholder="Repita su Contase&ntilde;a" hidden="true">
            
-            <input id="input-button-signup" class="button-signin-signup" type="submit" value="Registrarse" hidden="true">  
+            <input id="input-button-signup" class="button-signin-signup" type="reset" onclick="avisarError()" value="Registrarse" hidden="true">  
 
           </form>
 
